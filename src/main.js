@@ -4,7 +4,7 @@ import router from './router';
 import './utils/rem';
 
 if (process.env.NODE_ENV === 'development') {
-  require('../mock/mock');
+  require('./server/mock/mock');
 }
 
 new Vue({
