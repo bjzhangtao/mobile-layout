@@ -18,7 +18,7 @@
      const scale = document.documentElement.clientWidth / 750 ;
      // 设置页面根节点字体
      document.documentElement.style.fontSize = baseSize * Math.min(scale, 2) + 'px';
-   }
+   };
    // 初始化
    setRem();
    // 窗口大小改变时，重置 rem
@@ -29,7 +29,7 @@
 
    1. 安装 :
 
-      ```javascript
+      ```
       $ npm install postcss-pxtorem -D  // npm
       $ yarn add postcss-pxtorem --dev  // yarn
       ```
@@ -48,7 +48,9 @@
             minPixelValue:2 // 替换的最小像素值
           }
         }
-      }
+      };
+      ```
+      ```
       // vue-cli3: 根目录 package.json
       "postcss": {
         "plugins": {
