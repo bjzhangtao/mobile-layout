@@ -7,7 +7,10 @@
 
 > 设置根节点html的font-size：
 
-1. 创建rem.js文件：计算根节点字体大小；
+1. 综合考虑代码冗余和兼容取舍，暂定meta使用固定比例`<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">`
+2. 创建rem.js文件：计算根节点字体大小；
+   1. 优先使用vw计算
+   2. 如果不支持再用js输出
 
    ```javascript
    // 基准大小，设计稿基准字体，设计稿推荐：750 * 1136 (iphone6)
@@ -25,7 +28,7 @@
    window.onresize = function () { setRem() };
    ```
 
-2. 配置 `postcss-pxtorem`：自动转换px为rem：
+3. 配置 `postcss-pxtorem`：自动转换px为rem：
 
    1. 安装 :
 
